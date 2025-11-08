@@ -15,6 +15,7 @@ Logic Analyzer
 TOSLINK Audio adapter
 Oculink card
 Thermocouple / Thermometer
+USB Hub
 
 Old Components:
 NAS Chasis

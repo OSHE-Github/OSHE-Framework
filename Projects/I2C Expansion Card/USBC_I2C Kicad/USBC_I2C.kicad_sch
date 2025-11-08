@@ -2133,12 +2133,6 @@
 		(color 0 0 0 0)
 		(uuid "b7eafbcb-f9ae-4b86-afb4-eae812a90361")
 	)
-	(junction
-		(at 87.63 55.88)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dc369dce-e970-4c4e-a0a8-46b2390d41f9")
-	)
 	(wire
 		(pts
 			(xy 138.43 66.04) (xy 138.43 67.31)
@@ -2208,16 +2202,6 @@
 			(type default)
 		)
 		(uuid "111d2081-5a0d-4c43-a5b7-dc1350cfae03")
-	)
-	(wire
-		(pts
-			(xy 77.47 55.88) (xy 74.93 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "11936a43-8e2f-40e3-b162-afe8ec5cb941")
 	)
 	(wire
 		(pts
@@ -2721,16 +2705,6 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 55.88) (xy 87.63 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbb0c49d-d6c6-470d-a827-af2848c71d97")
-	)
-	(wire
-		(pts
 			(xy 119.38 29.21) (xy 119.38 27.94)
 		)
 		(stroke
@@ -2861,7 +2835,7 @@
 	)
 	(wire
 		(pts
-			(xy 87.63 53.34) (xy 87.63 55.88)
+			(xy 87.63 53.34) (xy 87.63 57.15)
 		)
 		(stroke
 			(width 0)
@@ -2878,16 +2852,6 @@
 			(type default)
 		)
 		(uuid "fad436ee-a5d9-49ca-b427-1a53c95524a3")
-	)
-	(wire
-		(pts
-			(xy 85.09 55.88) (xy 87.63 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc9608ad-f75f-43c2-ad8c-38bb8be6507a")
 	)
 	(wire
 		(pts
@@ -4348,74 +4312,6 @@
 			(project ""
 				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
 					(reference "#PWR01")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_US")
-		(at 81.28 55.88 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a8c5c065-39dc-4187-aeb9-96750d22f6d1")
-		(property "Reference" "R2"
-			(at 84.836 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Resistors TBD"
-			(at 85.09 70.104 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "R_1206_3216Metric"
-			(at 81.534 54.864 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 81.28 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor, US symbol"
-			(at 81.28 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e4d0a45b-192a-4425-9c25-ba3f466af265")
-		)
-		(pin "2"
-			(uuid "679a8528-d77c-4ccf-87a4-cfccbd87ecdd")
-		)
-		(instances
-			(project "USBC_I2C"
-				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
-					(reference "R2")
 					(unit 1)
 				)
 			)
