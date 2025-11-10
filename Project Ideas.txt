@@ -15,7 +15,8 @@ Logic Analyzer
 TOSLINK Audio adapter
 Oculink card
 Thermocouple / Thermometer
-USB Hub
+USB Hub that uses cards
+Inset Type A card for flush mouse dongles
 
 Old Components:
 NAS Chasis
