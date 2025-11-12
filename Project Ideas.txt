@@ -6,7 +6,6 @@ Graphics display for desktop front panel (Maybe a monitor?)
 
 Expansion Cards:
 Framework I2C expansion card
-Framework Microcontroller expansion card (Specific Microcontroller not decided)
 Dual USB-C expansion card with charging (If possible physically)
 RS232 Adapter Expansion Card
 Picovolt measurement expansion
@@ -17,6 +16,7 @@ Oculink card
 Thermocouple / Thermometer
 USB Hub that uses cards
 Inset Type A card for flush mouse dongles
+Magnetic Charger
 
 Old Components:
 NAS Chasis
