@@ -20,6 +20,7 @@ for addr in range(0, 0x80):
         #Check if the byte is invalid
         if(data != b'\x07'):
             devices = devices + 1
+            print("Found device at addr: 0x%02X" % addr)
 
     except EasyMCP2221.exceptions.NotAckError:
         pass
@@ -46,8 +47,8 @@ for addr in range(0, 0x80):
         pass
 
 #Setup LCD
-lcd = FastI2CLCD(mcp, 0x27, M2, cols=16, rows=2, backlight=True)
-lcd.set_backlight(True)
+#lcd = FastI2CLCD(mcp, 0x27, M2, cols=16, rows=2, backlight=True)
+#lcd.set_backlight(True)
 
 #Query all devices for debug information
 while True:
@@ -58,10 +59,10 @@ while True:
     for i in range(0, devices):
         slaveaddr = addrs[i]
         data = mcp.I2C_read(addr = slaveaddr,size = 4)
-        #print("Recieved: -" + data.decode('utf-8') + "- from: 0x%02X" % (slaveaddr))
-        #print(data)
-        lcd.write_line_fast("From: 0x%02X" % (slaveaddr) + ": " + data.decode('utf-8'), 0)
-        lcd.write_line_fast("Raw: " + str(data), 1)
+        print("Recieved: -" + data.decode('utf-8') + "- from: 0x%02X" % (slaveaddr))
+        print(data)
+        #lcd.write_line_fast("From: 0x%02X" % (slaveaddr) + ": " + data.decode('utf-8'), 0)
+        #lcd.write_line_fast("Raw: " + str(data), 1)
         sleep(1)
             
 

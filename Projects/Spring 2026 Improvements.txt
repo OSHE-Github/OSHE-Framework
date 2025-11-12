@@ -2,7 +2,9 @@ I2C Card:
 Add Zener diode based overvoltage protection to back of card
 Remove R2
 Get right size fuses (Physically, the amp rating is fine)
+Add switch for UART
 
 Display:
 Custom driver pcb with integrated usb hub (If time allows)
 Graphical display
+OLED Display?
