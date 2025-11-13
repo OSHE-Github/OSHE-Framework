@@ -32,6 +32,9 @@ Component tester
 Spectrometer
 More expansion cards? (Not like it doesn't have enough already)
 
+Misc:
+Mesh network host/Zygby
+
 
 
 
