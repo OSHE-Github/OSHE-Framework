@@ -1,0 +1,5 @@
+EasyMCP2221==1.8.4
+psutil==7.1.1
+pyopencl==2025.2.7
+pyserial==3.5
+WMI==1.5.1
