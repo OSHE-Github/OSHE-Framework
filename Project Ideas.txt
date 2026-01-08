@@ -2,10 +2,10 @@ Desktop:
 Tileable NeoPixel grid for desktop front panel
 RGB front panel for desktop front panel
 Status Display for desktop front panel
-Graphics display for desktop front panel (Maybe a monitor?)
+*Graphics display for desktop front panel (Small OLED?)*
 
 Expansion Cards:
-Framework I2C expansion card
+*Framework I2C expansion card -> Mostly done just needs polishing*
 Dual USB-C expansion card with charging (If possible physically)
 RS232 Adapter Expansion Card
 Picovolt measurement expansion
@@ -15,8 +15,8 @@ TOSLINK Audio adapter
 Oculink card
 Thermocouple / Thermometer
 USB Hub that uses cards
-Inset Type A card for flush mouse dongles
-Magnetic Charger
+*Inset Type A card for flush mouse dongles*
+*Magnetic Charger*
 
 Old Components:
 NAS Chasis
@@ -35,7 +35,4 @@ More expansion cards? (Not like it doesn't have enough already)
 Misc:
 Mesh network host/Zygby
 
-
-
-
-
+*Stars indicate ongoing projects or projects with high intrest*
