@@ -1,6 +1,6 @@
 I2C Card:
-Add Zener diode based overvoltage protection to back of card
-Remove R2
+Add Overvoltage & backfeeding protection *
+Remove R2 *
 Get right size fuses (Physically, the amp rating is fine)
 Add switch for UART
 
