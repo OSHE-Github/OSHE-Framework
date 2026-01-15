@@ -1,4 +1,4 @@
-27226091137081840
+27231396407809146
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54655,6 +54655,27 @@ Mini USB 2.0 Type B
 0
 9
 6
+Connector_USB_PCB_Edge
+USB_A_PCB_Edge_receptacle
+USB type A Plug, Horizontal, http://cnctech.us/pdfs/1001-011-01101.pdf
+USB-A
+0
+4
+4
+Connector_USB_PCB_Edge
+USB_C_PCB_receptacle_24pin_1mm-cutout
+USB TYPE C, RA RCPT PCB, SMT, https://www.amphenolcanada.com/StockAvailabilityPrice.aspx?From=&PartNum=12401610E4%7e2A
+USB C Type-C Receptacle SMD
+0
+24
+24
+Connector_USB_PCB_Edge
+USB_Micro-B_PCB_receptacle_5pin_2mm_cutout
+Micro USB B receptable with flange, bottom-mount, SMD, right-angle (http://www.molex.com/pdm_docs/sd/473460001_sd.pdf)
+Micro B USB SMD
+0
+5
+5
 Connector_Video
 DVI-D_Molex_74320-4004_Horizontal
 DVI-D Dual Link connector, horizontal, 24 pins, Molex P/N 74320-4004, https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/salesdrawingpdf/743/74320/743204004_sd.pdf?inline
