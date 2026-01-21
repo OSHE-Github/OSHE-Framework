@@ -2856,12 +2856,6 @@
 		(uuid "0d51f2b5-e275-42af-a658-7097f4abde19")
 	)
 	(junction
-		(at 138.43 83.82)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "27bfb080-1be3-4b65-8a93-28e3f2de262e")
-	)
-	(junction
 		(at 190.5 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2910,12 +2904,6 @@
 		(uuid "c9c7bcdc-8e91-41de-8d6d-1b6a3a1f816d")
 	)
 	(junction
-		(at 127 78.74)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cb059a17-297b-4e74-99f7-bdce43eed1cc")
-	)
-	(junction
 		(at 109.22 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2939,7 +2927,7 @@
 	)
 	(wire
 		(pts
-			(xy 127 78.74) (xy 139.7 78.74)
+			(xy 107.95 78.74) (xy 139.7 78.74)
 		)
 		(stroke
 			(width 0)
@@ -3066,6 +3054,16 @@
 			(type default)
 		)
 		(uuid "28ea117b-bffc-476d-a78d-373df8cf2936")
+	)
+	(wire
+		(pts
+			(xy 152.4 144.78) (xy 152.4 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a13ed7f-1cae-427b-93b7-e0ad4e5126f2")
 	)
 	(wire
 		(pts
@@ -3256,16 +3254,6 @@
 			(type default)
 		)
 		(uuid "766bfead-3eba-4a07-8e9c-ee17607172ea")
-	)
-	(wire
-		(pts
-			(xy 107.95 78.74) (xy 127 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7d1cf1d5-7222-4993-b873-2a7d97ef2f06")
 	)
 	(wire
 		(pts
@@ -3509,7 +3497,7 @@
 	)
 	(wire
 		(pts
-			(xy 139.7 137.16) (xy 144.78 137.16)
+			(xy 139.7 137.16) (xy 152.4 137.16)
 		)
 		(stroke
 			(width 0)
@@ -3807,16 +3795,6 @@
 		)
 		(uuid "49d7fd69-91b2-4056-bf45-53a57f9727b0")
 	)
-	(label "SCL{slash}UTx"
-		(at 199.39 66.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "541b4361-25b8-4ae1-89aa-229699b5c579")
-	)
 	(label "VBus"
 		(at 85.09 137.16 0)
 		(effects
@@ -3897,15 +3875,25 @@
 		)
 		(uuid "8ecdf09a-161b-4d00-b86d-3ef760a35983")
 	)
-	(label "SDA{slash}URx"
-		(at 198.12 63.5 180)
+	(label "Out1"
+		(at 190.5 66.04 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "a80f3aa1-377d-44db-8552-9aed486c152f")
+		(uuid "ac257573-8042-452d-becd-05e9ba0df252")
+	)
+	(label "Out0"
+		(at 189.23 63.5 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "b4cee344-b3e9-42bf-a2a9-08eae5cd4d50")
 	)
 	(label "Out0"
 		(at 161.29 127 0)
@@ -4956,6 +4944,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 152.4 140.97 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "912add0f-b652-48c7-8d0b-6e5771ac72b2")
+		(property "Reference" "C3"
+			(at 154.94 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 156.21 142.2399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 153.3652 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 152.4 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "95982e1a-e110-4bee-b3a0-36a77e258d45")
+		)
+		(pin "1"
+			(uuid "b6f77705-2296-4747-a9cf-b4ed4983ec55")
+		)
+		(instances
+			(project "USBC_I2C"
+				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:Polyfuse")
 		(at 93.98 137.16 90)
 		(unit 1)
@@ -5086,72 +5144,6 @@
 			(project "USBC_I2C"
 				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
 					(reference "TP3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 138.43 83.82 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "97f3c95f-1838-4e68-a74a-8e11ecd44119")
-		(property "Reference" "TP9"
-			(at 140.462 91.694 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "D+"
-			(at 140.462 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint_Pad_D1.0mm"
-			(at 133.35 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 133.35 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 138.43 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f59cddf6-f8a1-4d09-80b7-39e396a2202f")
-		)
-		(instances
-			(project "USBC_I2C"
-				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
-					(reference "TP9")
 					(unit 1)
 				)
 			)
@@ -5972,6 +5964,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 152.4 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dedb0a43-bfc1-435b-b020-00075f4128e2")
+		(property "Reference" "#PWR02"
+			(at 152.4 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.4 152.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c500074-b37c-42e1-963b-f0df4d5daab9")
+		)
+		(instances
+			(project "USBC_I2C"
+				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 121.92 95.25 90)
 		(unit 1)
@@ -6098,72 +6155,6 @@
 			(project "USBC_I2C"
 				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
 					(reference "TP6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 127 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ebee0063-6364-4343-92fd-afa941794c94")
-		(property "Reference" "TP10"
-			(at 124.968 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "D-"
-			(at 124.968 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "TestPoint_Pad_D1.0mm"
-			(at 132.08 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 132.08 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 127 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ce4b2978-9ef2-4de1-acfe-b05a75b0814f")
-		)
-		(instances
-			(project "USBC_I2C"
-				(path "/95c30658-c235-4432-9e4a-c0895948e60c"
-					(reference "TP10")
 					(unit 1)
 				)
 			)
