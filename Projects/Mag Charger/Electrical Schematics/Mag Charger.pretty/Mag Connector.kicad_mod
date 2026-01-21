@@ -1,0 +1,234 @@
+(footprint "Mag Connector"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 2.5 0)
+		(layer "F.SilkS")
+		(uuid "fd01dc8e-7d19-40df-ba87-5b3e70661510")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Mag Connector"
+		(at 0 -2.5 0)
+		(layer "F.Fab")
+		(uuid "c044d529-09c4-4a67-a8ac-e4cd475ddd1c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "caad8fca-cdbc-4078-93b2-a5d6e32b00a7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b3fe3a56-c450-40a1-96bd-54121069a595")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -9.3 -0.85)
+		(end -9.3 0.65)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "a3d625fd-5ef6-467e-9aa0-ef436351dda7")
+	)
+	(fp_rect
+		(start -14.85 0.65)
+		(end 14.85 4.65)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill no)
+		(layer "Dwgs.User")
+		(uuid "7cee8b65-c219-443e-88d3-afa5e25ba684")
+	)
+	(fp_line
+		(start -14.85 0.65)
+		(end -14.85 1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "bdd52ee6-e6b9-413a-9847-aa5573f50c94")
+	)
+	(fp_line
+		(start -14.35 0.65)
+		(end -14.85 0.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "98cc95c5-6412-4ec9-8314-b4d79c8ba43a")
+	)
+	(fp_line
+		(start 0 0.65)
+		(end -14.35 0.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "cea34d7c-0a93-400e-9e61-4684508a2dbb")
+	)
+	(fp_line
+		(start 0 0.65)
+		(end 14.35 0.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "131bf7da-d746-4453-8269-efef4f08944d")
+	)
+	(fp_line
+		(start 14.35 0.65)
+		(end 14.85 0.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "f5316166-d414-49e2-a8a3-7a0b1b7804cc")
+	)
+	(fp_line
+		(start 14.85 0.65)
+		(end 14.85 1.65)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(layer "Edge.Cuts")
+		(uuid "18e5da67-325e-4153-bedf-baabc744b096")
+	)
+	(fp_rect
+		(start -9.652 -1.651)
+		(end 9.652 1.905)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "8ced0d84-24dc-4e8f-b222-2135a1d59865")
+	)
+	(pad "1" thru_hole roundrect
+		(at -8.89 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "ecf65081-cdb2-491f-bf72-29306d02c0e9")
+	)
+	(pad "2" thru_hole roundrect
+		(at -6.35 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "65001dbb-c127-4305-b142-9f3f1a0a3367")
+	)
+	(pad "3" thru_hole roundrect
+		(at -3.81 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "ae0b1d8e-43f4-4b01-9f5a-6bf4023dee2a")
+	)
+	(pad "4" thru_hole roundrect
+		(at -1.27 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "05a8eb85-90c5-4512-9b66-3ffb6116f15e")
+	)
+	(pad "5" thru_hole roundrect
+		(at 1.27 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "837a8683-2b17-432a-aaac-add364726a29")
+	)
+	(pad "6" thru_hole roundrect
+		(at 3.81 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "d2251bb6-2b82-4937-a39c-182cc09f8b04")
+	)
+	(pad "7" thru_hole roundrect
+		(at 6.35 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "100a7ce9-a9b7-48ad-b01c-3200f8de508f")
+	)
+	(pad "8" thru_hole roundrect
+		(at 8.89 0)
+		(size 1.2 2)
+		(drill oval 0.8 2.5
+			(offset 0 -0.5)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.2083333333)
+		(uuid "baec29b8-5806-40d3-8799-d1f943d2a1e3")
+	)
+	(embedded_fonts no)
+)

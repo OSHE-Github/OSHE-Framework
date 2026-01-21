@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "Mag_Charger")(type "KiCad")(uri "${KIPRJMOD}/Mag_Charger.kicad_sym")(options "")(descr ""))
+)
