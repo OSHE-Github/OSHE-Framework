@@ -1377,206 +1377,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x04"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_01x04"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_01x04_1_1"
-				(rectangle
-					(start -1.27 3.81)
-					(end 1.27 -6.35)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 0.127)
-					(end 0 -0.127)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -2.413)
-					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 2.54 0)
-					(length 3.81)
-					(name "Pin_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 3.81)
-					(name "Pin_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Device:C"
 			(pin_numbers
 				(hide yes)
@@ -2244,6 +2044,14 @@
 		(uuid "154fd14b-3cf4-4b94-9b69-ea30165af652")
 	)
 	(no_connect
+		(at 87.63 49.53)
+		(uuid "2040ca42-6b45-45a2-8a4d-89dbcfd6cbbd")
+	)
+	(no_connect
+		(at 87.63 59.69)
+		(uuid "21c1d4a3-da06-4911-b958-b73406bf67b4")
+	)
+	(no_connect
 		(at 55.88 92.71)
 		(uuid "3463ab16-db24-47ab-9f03-79ad543a4452")
 	)
@@ -2258,6 +2066,14 @@
 	(no_connect
 		(at 55.88 80.01)
 		(uuid "72b64437-80f3-429e-81f8-418ae2958d26")
+	)
+	(no_connect
+		(at 87.63 57.15)
+		(uuid "87cb4361-8fd3-46bc-807b-8032a56db1f9")
+	)
+	(no_connect
+		(at 87.63 52.07)
+		(uuid "9199430f-2017-48c6-85c9-c4f26222f805")
 	)
 	(no_connect
 		(at 55.88 95.25)
@@ -2286,16 +2102,6 @@
 			(type default)
 		)
 		(uuid "12955bac-3e2e-437f-bec1-e4f9b753e65c")
-	)
-	(wire
-		(pts
-			(xy 81.28 83.82) (xy 69.85 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "19a65268-6c9d-4ad3-8ba9-e3c24cb9f4ed")
 	)
 	(wire
 		(pts
@@ -2519,26 +2325,6 @@
 	)
 	(wire
 		(pts
-			(xy 77.47 86.36) (xy 77.47 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b697898e-be6e-4447-9efe-ce732012914e")
-	)
-	(wire
-		(pts
-			(xy 77.47 78.74) (xy 77.47 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b96bcd2d-c1b8-4130-802b-68a1890825e8")
-	)
-	(wire
-		(pts
 			(xy 99.06 52.07) (xy 87.63 52.07)
 		)
 		(stroke
@@ -2629,16 +2415,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 78.74) (xy 77.47 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ea18f5e3-1b55-4e08-b214-766b29669d21")
-	)
-	(wire
-		(pts
 			(xy 55.88 49.53) (xy 67.31 49.53)
 		)
 		(stroke
@@ -2646,26 +2422,6 @@
 			(type default)
 		)
 		(uuid "ee5329f2-41d0-438a-b131-ccebd245195b")
-	)
-	(wire
-		(pts
-			(xy 77.47 86.36) (xy 81.28 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ef029fd5-d2cb-4e31-abc3-d21e2f3ee885")
-	)
-	(wire
-		(pts
-			(xy 81.28 81.28) (xy 69.85 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f11b7afa-f7f4-4724-ace5-50ca3fe36c53")
 	)
 	(wire
 		(pts
@@ -2718,26 +2474,6 @@
 		(uuid "42466aad-d125-48df-a543-8a4e288a249e")
 	)
 	(label "USB_TX1+"
-		(at 87.63 59.69 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "55daabe5-2818-4382-bd5a-a12fe2141713")
-	)
-	(label "USB_RX1+"
-		(at 87.63 52.07 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "656c48e2-f794-40b7-8f2e-1ffda2fd7b09")
-	)
-	(label "USB_TX1+"
 		(at 67.31 72.39 180)
 		(effects
 			(font
@@ -2777,26 +2513,6 @@
 		)
 		(uuid "b37f485e-4812-4218-87e2-011126ca3e4a")
 	)
-	(label "USB_TX1-"
-		(at 87.63 57.15 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b40ceaf7-5c0f-4c59-a546-190fe3c5fba4")
-	)
-	(label "USB_RX1-"
-		(at 87.63 49.53 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "b44f91be-cfeb-448f-9217-124a83725f0d")
-	)
 	(label "USB_RX1+"
 		(at 67.31 64.77 180)
 		(effects
@@ -2807,16 +2523,6 @@
 		)
 		(uuid "badfdc54-f064-4cd8-9a12-712739096ff9")
 	)
-	(label "USB_DP"
-		(at 69.85 83.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c4888a74-3999-4868-9db4-d3ce83dcd49b")
-	)
 	(label "USB_RX1-"
 		(at 67.31 62.23 180)
 		(effects
@@ -2826,16 +2532,6 @@
 			(justify right bottom)
 		)
 		(uuid "c52cfb27-49d2-49ed-bd50-c34f1341d8f9")
-	)
-	(label "USB_DN"
-		(at 69.85 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d6624d11-af6b-4f78-9e51-82aee647b333")
 	)
 	(label "USB_DN"
 		(at 67.31 49.53 180)
@@ -3290,70 +2986,6 @@
 			(project ""
 				(path "/b9c15e85-fcbf-409e-a96b-c9c6bd123369"
 					(reference "#PWR0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 77.47 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1524b941-b873-48a2-92e6-8eab4384ddbc")
-		(property "Reference" "#PWR07"
-			(at 77.47 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 77.597 94.5642 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 77.47 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 77.47 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 77.47 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0421e8ff-221c-4a51-af92-c91cc8db7dc2")
-		)
-		(instances
-			(project "Mouse Dongle Card"
-				(path "/b9c15e85-fcbf-409e-a96b-c9c6bd123369"
-					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -3855,70 +3487,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VBUS")
-		(at 77.47 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "877664ba-68b3-4664-a27a-7eda5baeb8e8")
-		(property "Reference" "#PWR08"
-			(at 77.47 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 77.851 70.5358 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 77.47 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 77.47 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 77.47 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e6f0ae5f-64c2-4216-bfdd-38f7f68d75f1")
-		)
-		(instances
-			(project "Mouse Dongle Card"
-				(path "/b9c15e85-fcbf-409e-a96b-c9c6bd123369"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 76.2 44.45 0)
 		(unit 1)
@@ -4175,82 +3743,6 @@
 			(project "Mouse Dongle Card"
 				(path "/b9c15e85-fcbf-409e-a96b-c9c6bd123369"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_01x04")
-		(at 86.36 81.28 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e22f6010-8c50-44fd-9723-a4716aa8d00f")
-		(property "Reference" "USBSolder1"
-			(at 88.9 81.2799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "~"
-			(at 88.9 83.8199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "USB_A_PCB_Edge_receptacle"
-			(at 86.36 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 86.36 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 86.36 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "5af88b9f-576b-47b5-9214-43e7cc41e3ea")
-		)
-		(pin "2"
-			(uuid "f0a80a88-9509-403a-b4d8-d817966851f6")
-		)
-		(pin "3"
-			(uuid "1c2252fd-bd25-4c24-8a6e-1d4d851c693e")
-		)
-		(pin "4"
-			(uuid "8a003d7f-49e1-4d18-a89f-fa6d6cbba8de")
-		)
-		(instances
-			(project ""
-				(path "/b9c15e85-fcbf-409e-a96b-c9c6bd123369"
-					(reference "USBSolder1")
 					(unit 1)
 				)
 			)
