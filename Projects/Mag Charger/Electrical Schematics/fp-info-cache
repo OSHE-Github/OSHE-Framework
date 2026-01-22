@@ -1,4 +1,4 @@
-27222555793559352
+27233169957759830
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -62195,12 +62195,33 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 10
 10
 Expansion_Card
+Framework-Logo_1.5mm_SilkScreen
+
+
+0
+0
+0
+Expansion_Card
 Mag Connector
 
 
 0
 8
 8
+Expansion_Card
+PinSocket_8FM-78-0010-02-146_1x10_P2.54mm_Horizontal_SMD
+
+
+0
+10
+10
+Expansion_Card
+USB_C_Plug_Molex_105444
+Universal Serial Bus (USB) Shielded I/O Plug, Type C, Right Angle, Surface Mount, http://www.molex.com/pdm_docs/sd/1054440001_sd.pdf
+USB Type-C Plug Edge Mount
+0
+24
+23
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -71813,12 +71834,33 @@ Yellow 5381 Series LED
 2
 2
 Mag Charger
+Framework-Logo_1.5mm_SilkScreen
+
+
+0
+0
+0
+Mag Charger
 Mag Connector
 
 
 0
 8
 8
+Mag Charger
+PinSocket_8FM-78-0010-02-146_1x10_P2.54mm_Horizontal_SMD
+
+
+0
+10
+10
+Mag Charger
+USB_C_Plug_Molex_105444
+Universal Serial Bus (USB) Shielded I/O Plug, Type C, Right Angle, Surface Mount, http://www.molex.com/pdm_docs/sd/1054440001_sd.pdf
+USB Type-C Plug Edge Mount
+0
+24
+23
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet

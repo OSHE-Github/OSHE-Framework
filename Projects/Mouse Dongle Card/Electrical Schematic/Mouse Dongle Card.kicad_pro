@@ -58,7 +58,56 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|108300000|123210000|e7c29be4-b4df-4ca4-974c-78de37423e3d|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "lib_footprint_mismatch|108300000|133360000|ae644950-f687-453a-9dc1-d210be603594|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "silk_edge_clearance|103491000|121010000|dc80a7bd-2bc6-43ca-83cc-b65d223f797c|0fc4ba1f-832a-4a0f-a28f-f7fcc93a1987",
+          ""
+        ],
+        [
+          "silk_edge_clearance|103491000|121010000|dc80a7bd-2bc6-43ca-83cc-b65d223f797c|6d45ff2a-4111-4a61-8826-bc3b4a04d64c",
+          ""
+        ],
+        [
+          "silk_edge_clearance|103550000|121068674|dc80a7bd-2bc6-43ca-83cc-b65d223f797c|6fd386ad-f504-4670-aad9-f121217ac114",
+          ""
+        ],
+        [
+          "silk_edge_clearance|103550000|121068674|dc80a7bd-2bc6-43ca-83cc-b65d223f797c|cf898f07-fed4-40ab-9dcb-c61ffea4f3d3",
+          ""
+        ],
+        [
+          "silk_edge_clearance|113050000|122650000|7a34463a-8b11-46c8-ba38-eefc3a041208|5765898e-83d1-4a68-9b78-1440e0818787",
+          ""
+        ],
+        [
+          "silk_edge_clearance|113050000|122650000|7a34463a-8b11-46c8-ba38-eefc3a041208|d53d2fb6-937a-448c-86db-259b85d921ba",
+          ""
+        ],
+        [
+          "silk_edge_clearance|113131016|121009999|b9314499-baf2-477b-a233-8a781a517cb1|ee2fde79-dbc5-4ba5-b74f-f19dda060525",
+          ""
+        ],
+        [
+          "silk_edge_clearance|113131016|121009999|b9314499-baf2-477b-a233-8a781a517cb1|f7e6dde1-5526-45d7-979b-ee32c2676fa0",
+          ""
+        ],
+        [
+          "silk_over_copper|100154819|133938001|60cb395b-dc87-47e3-83cc-b8c7c5fe808e|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
+          "starved_thermal|109550000|123000000|f1a9932d-22a1-4a7d-99f5-da7c712b498f|5f65712f-2a5d-420e-827a-84dadf6bdb07|F.Cu",
+          ""
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
