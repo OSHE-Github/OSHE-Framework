@@ -3215,7 +3215,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "SMF20A"
+		(property "Value" "SMBJ51ACT-ND"
 			(at 76.2 43.1799 90)
 			(effects
 				(font
@@ -3224,7 +3224,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Diode_SMD:D_SMF"
+		(property "Footprint" "D_SMB_Handsoldering"
 			(at 68.58 41.91 0)
 			(effects
 				(font
@@ -3233,7 +3233,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.vishay.com/doc?85881"
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds19002.pdf"
 			(at 73.66 40.64 0)
 			(effects
 				(font
@@ -3242,7 +3242,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "200W unidirectional Transil Transient Voltage Suppressor, 20Vrwm, SMF"
+		(property "Description" "TVS DIODE 51VWM 82.4VC DO214AA"
 			(at 73.66 41.91 0)
 			(effects
 				(font
