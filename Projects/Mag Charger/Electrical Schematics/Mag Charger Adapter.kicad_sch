@@ -2436,26 +2436,6 @@
 		)
 		(uuid "2b901a76-31bb-4b6d-9e69-db1366dd8d42")
 	)
-	(label "USB_DP"
-		(at 68.58 67.31 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "37f0da82-efc4-4f9e-80dd-b60ea317482d")
-	)
-	(label "USB_DN"
-		(at 73.66 64.77 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "4d596d2e-d1f3-436c-84a9-a3b5382f5074")
-	)
 	(label "USB_CC"
 		(at 96.52 48.26 0)
 		(effects
@@ -2475,6 +2455,26 @@
 			(justify left bottom)
 		)
 		(uuid "80bf0e9e-1eb9-4d4c-aca5-479560faa4d2")
+	)
+	(label "USB_DN"
+		(at 68.58 67.31 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "8293671b-7713-4762-8f1b-1f3bc59df3ac")
+	)
+	(label "USB_DP"
+		(at 73.66 64.77 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "944884f6-b999-459d-9d43-4832c085a5eb")
 	)
 	(label "USB_VCONN"
 		(at 92.71 55.88 0)
