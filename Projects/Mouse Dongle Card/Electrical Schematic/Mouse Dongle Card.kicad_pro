@@ -64,10 +64,6 @@
           ""
         ],
         [
-          "lib_footprint_mismatch|108300000|133360000|ae644950-f687-453a-9dc1-d210be603594|00000000-0000-0000-0000-000000000000",
-          ""
-        ],
-        [
           "silk_edge_clearance|103491000|121010000|dc80a7bd-2bc6-43ca-83cc-b65d223f797c|0fc4ba1f-832a-4a0f-a28f-f7fcc93a1987",
           ""
         ],
@@ -97,10 +93,6 @@
         ],
         [
           "silk_edge_clearance|113131016|121009999|b9314499-baf2-477b-a233-8a781a517cb1|f7e6dde1-5526-45d7-979b-ee32c2676fa0",
-          ""
-        ],
-        [
-          "silk_over_copper|100154819|133938001|60cb395b-dc87-47e3-83cc-b8c7c5fe808e|00000000-0000-0000-0000-000000000000",
           ""
         ],
         [
@@ -581,7 +573,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "../../../../../../Downloads/Mouse Dongle Card.stl",

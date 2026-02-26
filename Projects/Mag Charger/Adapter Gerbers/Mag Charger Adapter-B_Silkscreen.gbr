@@ -1,0 +1,29 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,9.0.7*%
+%TF.CreationDate,2026-02-26T13:23:17-05:00*%
+%TF.ProjectId,Mag Charger Adapter,4d616720-4368-4617-9267-657220416461,X1*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Legend,Bot*%
+%TF.FilePolarity,Positive*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 9.0.7) date 2026-02-26 13:23:17*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%ADD10C,0.508000*%
+G04 APERTURE END LIST*
+D10*
+%TO.C,J2*%
+X160063400Y-140854400D02*
+G75*
+G02*
+X159301400Y-140854400I-381000J0D01*
+G01*
+X159301400Y-140854400D02*
+G75*
+G02*
+X160063400Y-140854400I381000J0D01*
+G01*
+%TD*%
+M02*

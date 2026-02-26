@@ -58,7 +58,16 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "starved_thermal|107050000|125000000|9913e4c0-bab2-472b-b5f4-ff7fe38830b6|eea30a27-ae97-4302-a81a-dfd2f2e067ac|F.Cu",
+          ""
+        ],
+        [
+          "starved_thermal|109550000|125000000|9913e4c0-bab2-472b-b5f4-ff7fe38830b6|736a32ad-3473-4326-a57d-fee94329bffc|F.Cu",
+          ""
+        ]
+      ],
       "meta": {
         "filename": "board_design_settings.json",
         "version": 2
@@ -530,7 +539,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "../Card Gerbers/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "",
