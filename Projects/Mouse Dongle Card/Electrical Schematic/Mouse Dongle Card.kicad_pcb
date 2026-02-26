@@ -1214,6 +1214,7 @@
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/Custom Parts/692121330100.step"
+			(hide yes)
 			(offset
 				(xyz 0 3.4 -1.7)
 			)
@@ -1797,6 +1798,7 @@
 		)
 		(embedded_fonts no)
 		(model "${KIPRJMOD}/Custom Parts/1054440001.stp"
+			(hide yes)
 			(offset
 				(xyz 0 3.4 -0.4)
 			)

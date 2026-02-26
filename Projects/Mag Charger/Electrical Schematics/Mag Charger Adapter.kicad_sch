@@ -1991,7 +1991,7 @@
 	)
 	(text "USB-C Plug"
 		(exclude_from_sim no)
-		(at 30.48 26.67 0)
+		(at 42.672 22.098 0)
 		(effects
 			(font
 				(size 2.54 2.54)
@@ -2078,6 +2078,16 @@
 	)
 	(wire
 		(pts
+			(xy 96.52 55.88) (xy 105.41 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2af9d5f9-9d56-4e23-8a49-d935e7aba291")
+	)
+	(wire
+		(pts
 			(xy 50.8 50.8) (xy 53.34 50.8)
 		)
 		(stroke
@@ -2148,16 +2158,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 48.26) (xy 105.41 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5207dad4-f38e-43b8-8763-c54c3f65f4c0")
-	)
-	(wire
-		(pts
 			(xy 50.8 58.42) (xy 60.96 58.42)
 		)
 		(stroke
@@ -2195,16 +2195,6 @@
 			(type default)
 		)
 		(uuid "7e2e10af-41c2-43a7-a8fd-c18f3511c4ab")
-	)
-	(wire
-		(pts
-			(xy 92.71 55.88) (xy 105.41 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "841a02af-878f-4d03-80e9-54221639f1b0")
 	)
 	(wire
 		(pts
@@ -2308,6 +2298,16 @@
 	)
 	(wire
 		(pts
+			(xy 93.98 48.26) (xy 105.41 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b451a632-9890-44bf-a028-935f619288d6")
+	)
+	(wire
+		(pts
 			(xy 102.87 43.18) (xy 102.87 40.64)
 		)
 		(stroke
@@ -2396,16 +2396,6 @@
 		)
 		(uuid "f407f3e4-2af0-4bfb-af8a-ea95512bf61f")
 	)
-	(label "USB_DN"
-		(at 96.52 53.34 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "01511323-9bb2-4e6f-8228-de3ed08bb205")
-	)
 	(label "USB_VCONN"
 		(at 62.23 43.18 180)
 		(effects
@@ -2415,6 +2405,16 @@
 			(justify right bottom)
 		)
 		(uuid "055c2ee1-9b74-46eb-8c20-2594db3f036d")
+	)
+	(label "USB_CC"
+		(at 96.52 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "11aa17e3-b5c6-46cb-a14b-99f86c4c1505")
 	)
 	(label "USB_DN"
 		(at 62.23 53.34 180)
@@ -2436,17 +2436,7 @@
 		)
 		(uuid "2b901a76-31bb-4b6d-9e69-db1366dd8d42")
 	)
-	(label "USB_CC"
-		(at 96.52 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "511f2eaf-d202-4f9a-aca8-2b94556fd3dd")
-	)
-	(label "USB_DP"
+	(label "USB_DN"
 		(at 96.52 50.8 0)
 		(effects
 			(font
@@ -2454,7 +2444,17 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "80bf0e9e-1eb9-4d4c-aca5-479560faa4d2")
+		(uuid "5201da1c-4661-4f06-8fc3-e7e5b7bbac00")
+	)
+	(label "USB_VCONN"
+		(at 93.98 48.26 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6ff4babe-8454-442e-b2e9-21bd65267ca6")
 	)
 	(label "USB_DN"
 		(at 68.58 67.31 180)
@@ -2476,15 +2476,15 @@
 		)
 		(uuid "944884f6-b999-459d-9d43-4832c085a5eb")
 	)
-	(label "USB_VCONN"
-		(at 92.71 55.88 0)
+	(label "USB_DP"
+		(at 96.52 53.34 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "9904d8e5-ea80-46b0-b524-8f7fad70d55e")
+		(uuid "e1f61a49-c063-4608-9366-a3f2ad60e2e8")
 	)
 	(label "USB_DN"
 		(at 62.23 45.72 180)
@@ -2726,7 +2726,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "D_SMB_Handsoldering"
+		(property "Footprint" "D_SMB"
 			(at 68.58 41.91 0)
 			(effects
 				(font
@@ -3324,7 +3324,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fa4a83c1-0acf-4f2b-b817-d5282b5be4b5")
-		(property "Reference" "J3"
+		(property "Reference" "J2"
 			(at 30.48 25.4 0)
 			(effects
 				(font
@@ -3408,7 +3408,7 @@
 		(instances
 			(project ""
 				(path "/7d4a0788-2acd-4c20-8b55-4c42f19a8596"
-					(reference "J3")
+					(reference "J2")
 					(unit 1)
 				)
 			)
