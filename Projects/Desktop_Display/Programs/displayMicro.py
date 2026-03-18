@@ -11,18 +11,20 @@ elif platform == "win32":
     wait = 0
     
 #Port autodetection yay!
-target_name = "OSHE Framework Desktop Compatible Display"
+target_name = "OSHE Framework Desktop Display"
 ports = serial.tools.list_ports.comports()
-port = ""
+port = None
 
 for port in ports:
+    print(f"{port.device}")
     if target_name in port.description:
-        port = {port.device}
+        port = f"{port.device}"
+        print(port)
 
-if port == "":
+if port == None:
     print(f"ERROR: No display detected")
 
-ser = serial.Serial("/dev/ttyACM0", 115200)  # change COM port if needed (Work on auto com port designation later)
+ser = serial.Serial("/dev/ttyACM0", 115200)
 while True:
     cpu = cpuload()
     gpu = gpuload()

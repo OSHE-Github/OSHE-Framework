@@ -84,7 +84,7 @@ const unsigned char sleepImage[] PROGMEM = {
 
 void setup() {
   //Setup USB device descriptors
-  TinyUSBDevice.setProductDescriptor("OSHE Framework Desktop Compatible Display");
+  TinyUSBDevice.setProductDescriptor("OSHE Framework Desktop Display");
 
   //Initialize serial
   Serial.begin(115200);
