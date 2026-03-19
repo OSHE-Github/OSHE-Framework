@@ -24,7 +24,9 @@ for port in ports:
 if port == None:
     print(f"ERROR: No display detected")
 
-ser = serial.Serial("/dev/ttyACM0", 115200)
+#print(port);
+
+ser = serial.Serial(port, 115200)
 while True:
     cpu = cpuload()
     gpu = gpuload()

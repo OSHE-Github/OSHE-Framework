@@ -9,37 +9,3 @@ Requirement already satisfied: pytools>=2025.1.6 in /home/hydraoc/py_envs/lib/py
 Requirement already satisfied: typing_extensions>=4.6 in /home/hydraoc/py_envs/lib/python3.12/site-packages (from pyopencl) (4.15.0)
 Requirement already satisfied: siphash24>=1.6 in /home/hydraoc/py_envs/lib/python3.12/site-packages (from pytools>=2025.1.6->pyopencl) (1.8)
 Requirement already satisfied: pyserial in /home/hydraoc/py_envs/lib/python3.12/site-packages (3.5)
-/dev/ttyS31
-/dev/ttyS30
-/dev/ttyS29
-/dev/ttyS28
-/dev/ttyS27
-/dev/ttyS26
-/dev/ttyS25
-/dev/ttyS24
-/dev/ttyS23
-/dev/ttyS22
-/dev/ttyS21
-/dev/ttyS20
-/dev/ttyS19
-/dev/ttyS18
-/dev/ttyS17
-/dev/ttyS16
-/dev/ttyS15
-/dev/ttyS14
-/dev/ttyS13
-/dev/ttyS12
-/dev/ttyS11
-/dev/ttyS10
-/dev/ttyS9
-/dev/ttyS8
-/dev/ttyS7
-/dev/ttyS6
-/dev/ttyS5
-/dev/ttyS4
-/dev/ttyS3
-/dev/ttyS2
-/dev/ttyS1
-/dev/ttyS0
-/dev/ttyACM0
-/dev/ttyACM0

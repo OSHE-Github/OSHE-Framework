@@ -11,9 +11,10 @@
 U8G2_SSD1309_128X64_NONAME0_F_4W_HW_SPI u8g2(U8G2_R0, 5, 7, 8);
 
 //Var init
-int cpu = 0, ram = 0, gpu = 0, vram = 0;
+int rxData[4];
+char *dataLabels[] = {"CPU: ", "RAM: ", "GPU: ", "VRAM: "};
 unsigned long lastDataTime = 0;
-const short sleepTimeout = 10000;
+const short sleepTimeout = 2000;
 bool showingSleepImage = true;
 
 //Logo bitmap
@@ -142,63 +143,76 @@ void drawBar(int x, int y, int percent) {
 	}
 }
 
-void drawStats() {
+//Added args to increase modularity
+void drawStats(char *labels[], int data[]) {
   //clear frame buffer
   u8g2.clearBuffer();
 
   // Display CPU utilization and percentage bar
   u8g2.setCursor(0, -0);
-  u8g2.print("CPU ");
-  u8g2.print(cpu);
+  u8g2.print(labels[0]);
+  u8g2.print(data[0]);
   u8g2.print("%");
-  drawBar(55, 0, cpu);
+  drawBar(55, 0, data[0]);
 
   // Display physical RAM utilization and percentage bar
   u8g2.setCursor(0, 16);
-  u8g2.print("RAM ");
-  u8g2.print(ram);
+  u8g2.print(labels[1]);
+  u8g2.print(data[1]);
   u8g2.print("%");
-  drawBar(55, 16, ram);
+  drawBar(55, 16, data[1]);
 
   // Display GPU utilization and percentage bar
   u8g2.setCursor(0, 32);
-  u8g2.print("GPU ");
-  u8g2.print(gpu);
+  u8g2.print(labels[2]);
+  u8g2.print(data[2]);
   u8g2.print("%");
-  drawBar(55, 32, gpu);
+  drawBar(55, 32, data[2]);
 
   // Display VRAM utilization and percentage bar
   u8g2.setCursor(0, 48);
-  u8g2.print("VRAM ");
-  u8g2.print(vram);
+  u8g2.print(labels[3]);
+  u8g2.print(data[3]);
   u8g2.print("%");
-  drawBar(55, 48, vram);
+  drawBar(55, 48, data[3]);
 
   u8g2.sendBuffer();
 }
 
-void sleepAnimation() {
-  u8g2.clearBuffer();
-
-  // Move
+//Bouncing OSHE logo animation
+void bounceAnimation() {
+  //Calculate next location
   x += vx;
   y += vy;
 
-  // Bounce on X edges (128 width, 8px sprite → max 120)
+  //Bounce logic for 128x64 screen (Will rewrite to be scalable)
   if (x <= 0 || x >= 120) {
     vx = -vx;
-    x += vx; // prevent sticking
+    x += vx;
   }
 
-  // Bounce on Y edges (64 height, 8px sprite → max 56)
   if (y <= 0 || y >= 56) {
     vy = -vy;
     y += vy;
   }
 
-  // Draw
+  //Draw and send frame buffer
   u8g2.drawXBM(x, y, 8, 8, logo);
   u8g2.sendBuffer();
+}
+
+//Draw image but don't draw any black pixels instead of overwriting white pixels
+void drawTransparentImage(int x, int y, int sizeX, int sizeY, unsigned char image[]){
+  char bitBuffer = 0;
+  for(int i = 0; i < sizeX; i++){
+      for(int j = 0; j < sizeY; j++){
+        bitBuffer = image[i] << j;
+        bitBuffer = bitBuffer >> 7;
+        if(bitBuffer == 1){
+          u8g2.drawPixel(x+i, y+j);
+        }
+      }
+  }
 }
 
 //Scanning for data from the display
@@ -207,14 +221,14 @@ void loop() {
     String line = Serial.readStringUntil('\n');
 
     //Filter the input for the expected data values (Integers)
-    if (sscanf(line.c_str(), "%d,%d,%d,%d", &cpu, &ram, &gpu, &vram) == 4) {
-      drawStats();
+    if (sscanf(line.c_str(), "%d,%d,%d,%d", &rxData[0], &rxData[1], &rxData[2], &rxData[3]) == 4) {
+      drawStats(dataLabels, rxData);
 			lastDataTime = millis();
     }
   }
 
 	if(millis()-lastDataTime > sleepTimeout){
-		sleepAnimation();
+		bounceAnimation();
 		delay(25);
 	}
 }
