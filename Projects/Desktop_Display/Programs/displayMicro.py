@@ -17,14 +17,11 @@ port = None
 
 for port in ports:
     print(f"{port.device}")
-    if target_name in port.description:
-        port = f"{port.device}"
-        print(port)
+    port = f"{port.device}"
+    print(port)
 
 if port == None:
     print(f"ERROR: No display detected")
-
-#print(port);
 
 ser = serial.Serial(port, 115200)
 while True:
