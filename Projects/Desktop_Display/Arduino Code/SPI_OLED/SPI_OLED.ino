@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include <U8g2lib.h>
 #include <Adafruit_TinyUSB.h>
+#include <math.h>
 
 #ifdef U8X8_HAVE_HW_SPI
 #include <SPI.h>
@@ -15,6 +16,16 @@ unsigned long lastDataTime = 0;
 const short sleepTimeout = 10000;
 bool showingSleepImage = true;
 
+//Logo bitmap
+const unsigned char logo[] PROGMEM = {0x18, 0x7E, 0x7E, 0xE7, 0xE7, 0x66, 0x24, 0x42};
+
+//Animation variables
+	unsigned char x = 0;
+	unsigned char y = 0;
+	char vx = 1;
+	char vy = -2;
+
+//Splash screen bitmap
 const unsigned char sleepImage[] PROGMEM = {
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
 	0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
@@ -99,7 +110,6 @@ void setup() {
   u8g2.setFont(u8g2_font_6x10_tf);
   u8g2.setFontPosTop();
   u8g2.setFlipMode(1);
-
   drawWaiting();
 }
 
@@ -167,6 +177,30 @@ void drawStats() {
   u8g2.sendBuffer();
 }
 
+void sleepAnimation() {
+  u8g2.clearBuffer();
+
+  // Move
+  x += vx;
+  y += vy;
+
+  // Bounce on X edges (128 width, 8px sprite → max 120)
+  if (x <= 0 || x >= 120) {
+    vx = -vx;
+    x += vx; // prevent sticking
+  }
+
+  // Bounce on Y edges (64 height, 8px sprite → max 56)
+  if (y <= 0 || y >= 56) {
+    vy = -vy;
+    y += vy;
+  }
+
+  // Draw
+  u8g2.drawXBM(x, y, 8, 8, logo);
+  u8g2.sendBuffer();
+}
+
 //Scanning for data from the display
 void loop() {
   if (Serial.available()) {
@@ -180,6 +214,7 @@ void loop() {
   }
 
 	if(millis()-lastDataTime > sleepTimeout){
-		drawWaiting();
+		sleepAnimation();
+		delay(25);
 	}
 }
