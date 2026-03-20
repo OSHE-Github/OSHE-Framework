@@ -16,9 +16,10 @@ ports = serial.tools.list_ports.comports()
 port = None
 
 for port in ports:
-    print(f"{port.device}")
-    port = f"{port.device}"
-    print(port)
+    if target_name in port.description:
+        print(f"{port.device}")
+        port = f"{port.device}"
+        print(port)
 
 if port == None:
     print(f"ERROR: No display detected")
