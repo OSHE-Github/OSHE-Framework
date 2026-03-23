@@ -12,7 +12,7 @@ U8G2_SSD1309_128X64_NONAME0_F_4W_HW_SPI u8g2(U8G2_R0, 5, 7, 8);
 
 //Var init
 int rxData[4];
-char *dataLabels[] = {"CPU: ", "RAM: ", "GPU: ", "VRAM: "};
+char *dataLabels[] = {"CPU:  ", "RAM:  ", "GPU:  ", "VRAM: "};
 unsigned long lastDataTime = 0;
 const short sleepTimeout = 2000;
 bool showingSleepImage = true;
@@ -153,28 +153,28 @@ void drawStats(char *labels[], int data[]) {
   u8g2.print(labels[0]);
   u8g2.print(data[0]);
   u8g2.print("%");
-  drawBar(55, 0, data[0]);
+  drawBar(65, 0, data[0]);
 
   // Display physical RAM utilization and percentage bar
   u8g2.setCursor(0, 16);
   u8g2.print(labels[1]);
   u8g2.print(data[1]);
   u8g2.print("%");
-  drawBar(55, 16, data[1]);
+  drawBar(65, 16, data[1]);
 
   // Display GPU utilization and percentage bar
   u8g2.setCursor(0, 32);
   u8g2.print(labels[2]);
   u8g2.print(data[2]);
   u8g2.print("%");
-  drawBar(55, 32, data[2]);
+  drawBar(65, 32, data[2]);
 
   // Display VRAM utilization and percentage bar
   u8g2.setCursor(0, 48);
   u8g2.print(labels[3]);
   u8g2.print(data[3]);
   u8g2.print("%");
-  drawBar(55, 48, data[3]);
+  drawBar(65, 48, data[3]);
 
   u8g2.sendBuffer();
 }
@@ -228,7 +228,7 @@ void loop() {
   }
 
 	if(millis()-lastDataTime > sleepTimeout){
-		bounceAnimation();
+		drawWaiting();
 		delay(25);
 	}
 }

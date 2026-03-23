@@ -11,6 +11,7 @@ pip --no-cache-dir install easymcp2221 >>log.txt
 pip --no-cache-dir install psutil >>log.txt
 pip --no-cache-dir install pyopencl >>log.txt
 pip --no-cache-dir install pyserial >>log.txt
+pip --no-cache-dir install pyamdgpuinfo >>log.txt
 
-python3 displayMicro.py >> log.txt
+python3 displayMicro.py
 

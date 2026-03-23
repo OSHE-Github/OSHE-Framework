@@ -1,6 +1,7 @@
 from sys import platform
 import serial
 from time import sleep
+import pyamdgpuinfo
 import serial.tools.list_ports
 
 if platform == "linux":
@@ -9,22 +10,25 @@ if platform == "linux":
 elif platform == "win32":
     from pcSensorsWin import cpuload, gpuload, ramload, vramload
     wait = 0
-    
+
 #Port autodetection yay!
 target_name = "OSHE Framework Desktop Display"
 ports = serial.tools.list_ports.comports()
-port = None
+comport = None
 
 for port in ports:
     if target_name in port.description:
         print(f"{port.device}")
-        port = f"{port.device}"
-        print(port)
+        comport = f"{port.device}"
 
-if port == None:
+#Quit program if display not detected
+if comport == None:
     print(f"ERROR: No display detected")
+    quit()
 
-ser = serial.Serial(port, 115200)
+print(comport)
+
+ser = serial.Serial(comport, 115200)
 while True:
     cpu = cpuload()
     gpu = gpuload()
