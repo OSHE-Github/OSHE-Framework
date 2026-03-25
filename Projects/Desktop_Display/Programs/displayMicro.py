@@ -12,13 +12,18 @@ elif platform == "win32":
 
 #Port autodetection yay!
 target_name = "OSHE Framework Desktop Display"
+target_PID = 51966
 ports = serial.tools.list_ports.comports()
 comport = None
 
 for port in ports:
+    print(port)
+    print(port.pid)
     if target_name in port.description:
         print(f"{port.device}")
         comport = f"{port.device}"
+    if target_PID == port.pid:
+        comport = port.device
 
 #Quit program if display not detected
 if comport == None:
