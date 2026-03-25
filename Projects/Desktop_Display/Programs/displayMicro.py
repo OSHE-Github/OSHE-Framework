@@ -1,7 +1,6 @@
 from sys import platform
 import serial
 from time import sleep
-import pyamdgpuinfo
 import serial.tools.list_ports
 
 if platform == "linux":
