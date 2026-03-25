@@ -1,7 +1,6 @@
 import psutil
 import serial
 import wmi
-import pyamdgpuinfo
 import ctypes as C
 from ctypes import wintypes
 import pyopencl as cl
