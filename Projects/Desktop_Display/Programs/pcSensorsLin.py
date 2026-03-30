@@ -25,7 +25,7 @@ def vramload():
     pyamdgpuinfo.detect_gpus()
     gpu = pyamdgpuinfo.get_gpu(0)
     vramInfo = gpu.memory_info
-    print(vramInfo)
+    #print(vramInfo)
 
     total = vramInfo['gtt_size'] + vramInfo['vram_size']
     used = gpu.query_vram_usage() + gpu.query_gtt_usage()

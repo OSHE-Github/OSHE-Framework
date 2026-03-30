@@ -25,10 +25,9 @@ for port in ports:
 
 if comport == None:
     for port in ports:
-        if targetVID == 244:
+        if targetVID == 5824:
             if targetPID == 6743:
                 print(port.description)
-                print("bruh")
                 comport = port.device
                 break
 

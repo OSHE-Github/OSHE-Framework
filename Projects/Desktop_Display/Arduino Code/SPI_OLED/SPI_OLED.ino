@@ -96,7 +96,8 @@ const unsigned char sleepImage[] PROGMEM = {
 
 void setup() {
   //Setup USB device descriptors
-  TinyUSBDevice.setProductDescriptor("OSHE Framework Desktop Display");
+  TinyUSBDevice.setProductDescriptor("OSHE Framework Desktop Display"); //Simplifies linux detection
+  USBDevice.setID(5824, 6743); //Generic HID with a custom PID for detection
 
   //Initialize serial
   Serial.begin(115200);
