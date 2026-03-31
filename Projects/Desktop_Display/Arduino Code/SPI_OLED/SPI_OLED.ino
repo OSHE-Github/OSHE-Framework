@@ -12,9 +12,9 @@ U8G2_SSD1309_128X64_NONAME0_F_4W_HW_SPI u8g2(U8G2_R0, 5, 7, 8);
 
 //Var init
 int rxData[4];
-char *dataLabels[] = {"CPU:  ", "RAM:  ", "GPU:  ", "VRAM: "};
+const char* dataLabels[] = {"CPU:  ", "RAM:  ", "GPU:  ", "VRAM: "};
 unsigned long lastDataTime = 0;
-const short sleepTimeout = 2000;
+const short sleepTimeout = 4000;
 bool showingSleepImage = true;
 
 //Logo bitmap
@@ -145,7 +145,7 @@ void drawBar(int x, int y, int percent) {
 }
 
 //Added args to increase modularity
-void drawStats(char *labels[], int data[]) {
+void drawStats(const char *labels[], int data[]) {
   //clear frame buffer
   u8g2.clearBuffer();
 
