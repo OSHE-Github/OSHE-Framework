@@ -8,7 +8,7 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 //Var init
 unsigned long lastDataTime = 0;
-const short sleepTimeout = 4000;
+const short sleepTimeout = 10000;
 bool showingSleepImage = false;
 
 void setup() {

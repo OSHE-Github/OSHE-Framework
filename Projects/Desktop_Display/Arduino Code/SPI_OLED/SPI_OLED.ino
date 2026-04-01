@@ -16,6 +16,7 @@ const char* dataLabels[] = {"CPU:  ", "RAM:  ", "GPU:  ", "VRAM: "};
 unsigned long lastDataTime = 0;
 const short sleepTimeout = 4000;
 bool showingSleepImage = true;
+bool burnInMitigation = true;
 
 //Logo bitmap
 const unsigned char logo[] PROGMEM = {0x18, 0x7E, 0x7E, 0xE7, 0xE7, 0x66, 0x24, 0x42};
@@ -25,6 +26,9 @@ const unsigned char logo[] PROGMEM = {0x18, 0x7E, 0x7E, 0xE7, 0xE7, 0x66, 0x24, 
 	unsigned char y = 0;
 	char vx = 1;
 	char vy = -2;
+  char xoff = 0;
+  char yoff = 0;
+  int timeSec = 0;
 
 //Splash screen bitmap
 const unsigned char sleepImage[] PROGMEM = {
@@ -127,7 +131,7 @@ void drawWaiting() {
 // Draw a horizontal percentage bar
 void drawBar(int x, int y, int percent) {
   //Constant values defined for each bar
-  const int maxWidth = 60;       
+  const int maxWidth = 60;
   const int height = 8;
 
   //Filtering for out of bounds values
@@ -138,9 +142,9 @@ void drawBar(int x, int y, int percent) {
   int fillWidth = (percent * maxWidth) / 100;
 
   //Draw percentage bar outline and fill in accurate percentage
-  u8g2.drawFrame(x, y, maxWidth, height);
+  u8g2.drawFrame(x+xoff, y+yoff, maxWidth, height);
 	if (fillWidth > 2){
-  	u8g2.drawBox(x + 1, y + 1, fillWidth - 2, height - 2);
+  	u8g2.drawBox(x+xoff + 1, y+yoff + 1, fillWidth - 2, height - 2);
 	}
 }
 
@@ -150,28 +154,28 @@ void drawStats(const char *labels[], int data[]) {
   u8g2.clearBuffer();
 
   // Display CPU utilization and percentage bar
-  u8g2.setCursor(0, -0);
+  u8g2.setCursor(0+xoff, 0+yoff);
   u8g2.print(labels[0]);
   u8g2.print(data[0]);
   u8g2.print("%");
   drawBar(65, 0, data[0]);
 
   // Display physical RAM utilization and percentage bar
-  u8g2.setCursor(0, 16);
+  u8g2.setCursor(0+xoff, 16+yoff);
   u8g2.print(labels[1]);
   u8g2.print(data[1]);
   u8g2.print("%");
   drawBar(65, 16, data[1]);
 
   // Display GPU utilization and percentage bar
-  u8g2.setCursor(0, 32);
+  u8g2.setCursor(0+xoff, 32+yoff);
   u8g2.print(labels[2]);
   u8g2.print(data[2]);
   u8g2.print("%");
   drawBar(65, 32, data[2]);
 
   // Display VRAM utilization and percentage bar
-  u8g2.setCursor(0, 48);
+  u8g2.setCursor(0+xoff, 48+yoff);
   u8g2.print(labels[3]);
   u8g2.print(data[3]);
   u8g2.print("%");
@@ -221,6 +225,7 @@ void drawTransparentImage(int x, int y, int sizeX, int sizeY, unsigned char imag
 
 //Scanning for data from the display
 void loop() {
+  //Read serial data that is available
   if (Serial.available()) {
     String line = Serial.readStringUntil('\n');
 
@@ -231,8 +236,26 @@ void loop() {
     }
   }
 
-	if(millis()-lastDataTime > sleepTimeout){
-	  bounceAnimation();
-		delay(25);
-	}
+  //Get time running in seconds
+  timeSec = millis() / 1000;
+
+  //Oled burn in mitigation
+  if(burnInMitigation){
+    if(timeSec % 3600 == 0){
+      xoff = 1;
+      yoff = 5;
+      if(timeSec % 7200 == 0){
+        xoff = 0;
+        yoff = 0;
+      }
+    }
+  }
+
+  //Run sleep animation if we havent gotten anything in awhile
+  if(showingSleepImage){
+    if(millis()-lastDataTime > sleepTimeout){
+      bounceAnimation();
+      delay(25);
+    }
+  }
 }
