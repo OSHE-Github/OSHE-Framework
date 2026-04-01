@@ -1,4 +1,4 @@
-uid=0(root) gid=0(root) groups=0(root),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),114(lpadmin),1000(hydraoc)
+uid=0(root) gid=0(root) groups=0(root),4(adm),20(dialout),24(cdrom),27(sudo),30(dip),46(plugdev),100(users),114(lpadmin),1000(hydraoc)
 Requirement already satisfied: easymcp2221 in /home/hydraoc/py_envs/lib/python3.12/site-packages (1.8.4)
 Requirement already satisfied: hidapi in /home/hydraoc/py_envs/lib/python3.12/site-packages (from easymcp2221) (0.15.0)
 Requirement already satisfied: psutil in /home/hydraoc/py_envs/lib/python3.12/site-packages (7.2.2)

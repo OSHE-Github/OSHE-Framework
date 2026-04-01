@@ -1,10 +1,24 @@
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
+#include <Adafruit_TinyUSB.h>
 
 // LCD I2C address is 0x27
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
+
+//Var init
+unsigned long lastDataTime = 0;
+const short sleepTimeout = 4000;
+bool showingSleepImage = false;
+
 void setup() {
+  //Setup USB device descriptors
+  TinyUSBDevice.setProductDescriptor("OSHE Framework Desktop Display"); //Simplifies linux detection
+  USBDevice.setID(5824, 6743); //Generic HID with a custom PID for detection
+
+  Wire.setSDA(0);
+  Wire.setSCL(1);
+
   Serial.begin(115200);   // Serial for receiving data from Windows
   lcd.init();             // Initialize LCD
   lcd.backlight();        // Turn on backlight
@@ -16,8 +30,13 @@ void loop() {
   if (Serial.available()) {
     String line = Serial.readStringUntil('\n');
     int cpu, ram, gpu, vram;
-    // Expecting format: CPU,RAM,GPU
+    //Expecting format: CPU,RAM,GPU
     if (sscanf(line.c_str(), "%d,%d,%d,%d", &cpu, &ram, &gpu, &vram) == 4) {
+      if(lastDataTime){
+        lastDataTime = false;
+        lcd.backlight(); 
+      }
+
       // Update first line
       lcd.setCursor(0, 0);
       lcd.print("CPU:");
@@ -41,6 +60,13 @@ void loop() {
       }
       lcd.print(vram);
       lcd.print("%   ");  // extra spaces overwrite leftovers
+      lastDataTime = millis();
     }
   }
+
+  if(millis()-lastDataTime > sleepTimeout){
+    showingSleepImage = true;
+    lcd.noBacklight(); 
+		delay(25);
+	}
 }

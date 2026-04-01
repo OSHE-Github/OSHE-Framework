@@ -182,6 +182,9 @@ void drawStats(const char *labels[], int data[]) {
 
 //Bouncing OSHE logo animation
 void bounceAnimation() {
+  //Clear frame buffer
+  u8g2.clearBuffer();
+  
   //Calculate next location
   x += vx;
   y += vy;
@@ -229,7 +232,7 @@ void loop() {
   }
 
 	if(millis()-lastDataTime > sleepTimeout){
-		drawWaiting();
+	  bounceAnimation();
 		delay(25);
 	}
 }
