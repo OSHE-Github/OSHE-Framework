@@ -9,3 +9,4 @@ Requirement already satisfied: pytools>=2025.1.6 in /home/hydraoc/py_envs/lib/py
 Requirement already satisfied: typing_extensions>=4.6 in /home/hydraoc/py_envs/lib/python3.12/site-packages (from pyopencl) (4.15.0)
 Requirement already satisfied: siphash24>=1.6 in /home/hydraoc/py_envs/lib/python3.12/site-packages (from pytools>=2025.1.6->pyopencl) (1.8)
 Requirement already satisfied: pyserial in /home/hydraoc/py_envs/lib/python3.12/site-packages (3.5)
+Requirement already satisfied: pyamdgpuinfo in /home/hydraoc/py_envs/lib/python3.12/site-packages (2.1.7)
