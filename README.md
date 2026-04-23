@@ -1,1 +1,1 @@
-(TO BE REPLACED WITH SEMESTER REPORT IN A FEW DAYS)
+Refer to README.pdf for detailed instructions on how to use our devices.
